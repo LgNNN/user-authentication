@@ -1,0 +1,12 @@
+<header>
+    <a  id="logo-link" href="/" draggable="false"><img id="logo-img" src="img/logo.png" alt="Logo" draggable="false"></a>
+    <nav>
+        <% if(email) { %>
+            <a href="#"><%= email.split('@')[0]; %> </a>
+            <a href="/logout" draggable="false">Log out</a>
+        <% } else { %>
+            <a href="/login" draggable="false">Log in</a>
+            <a href="/signup" draggable="false">Sign Up</a>
+        <% }%>
+    </nav>
+</header>

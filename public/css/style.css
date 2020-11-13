@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(2, 215, 245);
+    background: linear-gradient(to right, rgba(2, 215, 245, 1) 20%, rgba(70, 83, 255, 1) 50%, rgba(241, 0, 235, 0.85) 80%);
+    width: 100%;
+    /* height: 100vh; this is bad for responsive!*/
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+form {
+    background-color: aliceblue;
+    text-align: center;
+    padding: 3.125rem 0;
+    width: 25rem;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 3px rgb(0, 0, 0);
+    box-shadow: 0 0 3px rgb(0, 0, 0);
+    max-width: 80%;
+
+}
+
+.form-container{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form h2 {
+    font-size: xx-large;
+}
+
+.forms {
+    display: block;
+    width: 80%;
+    display: block;
+    padding: 0.5rem 0;
+    margin: 5px auto;
+    font-size: large;
+    background-color: aliceblue;
+    border-style: solid;
+    border-width: 0 0 2px 0;
+}
+
+.forms:focus {
+    outline: none;
+    border-color: black;
+}
+
+#rememberLabel {
+    display: inline;
+}
+
+.labels {
+    display: block;
+    text-align: start;
+    font-size: 1.3rem;
+    margin: 0 auto;
+    width: 80%;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+}
+
+#check-forgot {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: rgb(47, 45, 45);
+}
+
+#check-forgot a {
+    display: inline;
+    color: rgb(47, 45, 45);
+}
+
+#check-forgot a:hover {
+    color: darkmagenta;
+    font-weight: 600;
+}
+
+input[type="checkbox"] {
+    display: inline;
+    width: auto;
+}
+
+.sub-btn {
+    margin-top: 10px;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 0.8rem;
+    background: rgb(2, 215, 245);
+    background: linear-gradient(to left, rgba(2, 215, 245, 1) 20%, rgba(70, 83, 255, 1) 50%, rgba(241, 0, 235, 0.85) 80%);
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 80%;
+}
+
+.sub-btn:hover {
+    cursor: pointer;
+    animation-name: login-hover;
+    animation-duration: 0.1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.sub-btn:active{
+    color: darkmagenta;
+    outline: none;
+}
+
+.google {
+    display: inline-block;
+    background-color: #db4a39;
+    color: white;
+    padding: 0.6rem 0.8rem;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.google:hover {
+    background-color: #c3301c;
+}
+
+.google:active{
+    background-color: #a11e0c;  
+}
+
+
+.signup {
+    color:rgba(241, 0, 235, 0.85);
+    font-weight: 600;
+    
+}
+
+.signup:hover {
+   color:darkmagenta; 
+}
+
+.mt {
+    margin-top: 1rem;
+}
+
+.mtt {
+    margin-top:2.5rem;
+}
+
+
+.footer{
+    width: 100%;
+    background-color: #1A202C;
+    padding: 1.2rem;
+    color:white;
+    flex-shrink: 0;
+    text-align: center;
+
+}
+footer a{
+    font-weight: 600;
+    color: white;
+}
+
+footer a:hover{
+    color: rgba(2, 215, 245, 1);
+}
+
+
+/* form errors  */
+.validation-error {
+    width: 80%;
+    color: red;
+    font-size: 0.8rem;
+    text-align: start;
+    margin: 0 auto;
+    font-weight: 600;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 95%;
+    flex-shrink: 0;
+    /* height: 6rem; */
+   
+}
+
+#logo-img{
+    width: 6.88rem;
+    height: 6.88rem;
+}
+
+header nav a{
+    background-color:transparent;
+    padding: 0.6rem;
+    color: black;
+    border-radius: 10px;
+    margin-left: 5px;
+    font-weight: 600;
+    font-size: 1.3rem;
+   
+}
+
+header nav a:hover{
+    color: rgba(2, 215, 245, 1);
+    animation: nav-hover 0.2s linear forwards;
+}
+
+.hide{
+    display: none;
+}
+
+/* media querries */
+@media screen and (min-width: 1000px) and (min-height:700px) {
+    form{
+        height: 70vh;
+    }
+    form h2{
+        margin-top: 1.5rem;
+    }
+ }
+ 
+ 
+ @media screen and (min-height: 1000px) and (orientation: portrait) {
+     form{
+         height: 50vh;
+     }
+  }
+ 
+ 
+ @media screen and (max-height: 700px){
+     .container{
+         margin: 0.7rem 0;
+     }
+  }
+
+  @media screen and (max-width: 700px){
+    header{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    #logo-link{
+        align-self: flex-start;
+    }
+ }
+
+
+
+  /* animations */
+@keyframes login-hover {
+    from {
+        background: linear-gradient(to left, rgba(2, 215, 245, 1) 20%, rgba(70, 83, 255, 1) 50%, rgba(241, 0, 235, 0.85) 80%);
+    }
+
+    to {
+        background: linear-gradient(to right, rgba(2, 215, 245, 1) 20%, rgba(70, 83, 255, 1) 50%, rgba(241, 0, 235, 0.85) 80%);
+    }
+}
+
+@keyframes nav-hover{
+    from {color: black;}
+    to { color: rgba(2, 215, 245, 1);}
+}
+

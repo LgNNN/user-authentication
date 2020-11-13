@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>theSecret | Sign Up</title>
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <%- include('partials/_header') %>
+    <main class="container">
+    <form id="signup-form">
+        <h2>Sign Up</h2>
+        <label class="labels" for="email">Email</label>
+        <input class="forms" type="text" name="email" required maxlength="31" autocomplete="off">
+        <div class="validation-error"></div>
+        <label class="labels" for="password">Password</label>
+        <input class="forms" id="" type="password" name="password" required maxlength="31" autocomplete="off">
+        <div class="validation-error"></div>
+        <input id="submitBtn" class="sub-btn" type="submit" value="Sign Up">
+        <div class="google-sign">
+            <p class="mt">or</p>
+            <a href="#" class="google mt"><i class="fa fa-google fa-fw"></i>Sign up with Google</a>
+            <p class="mtt">Already have an account? <a href="/login"class="signup">Log In</a></p>
+        </div>
+    </form>
+    </main>
+    <%- include('partials/_footer') %>
+    <script src="https://kit.fontawesome.com/9046144151.js" crossorigin="anonymous"></script>
+    <script src="js/signup.js"></script>
+</body>
+</html>

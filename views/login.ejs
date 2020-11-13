@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>theSecret | Login</title>
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <%- include('partials/_header') %>
+    <main class="container">
+        <form id="login-form">
+            <h2>Login</h2>
+            <label class="labels" for="email">Email</label>
+            <input class="forms" type="text" name="email" required maxlength="31" autocomplete="off">
+            <div class="validation-error"></div>
+            <label class="labels" for="password">Password</label>
+            <input class="forms" type="password" name="password" required maxlength="31">
+            <div class="validation-error"></div>
+            <div id="check-forgot">
+                <div>
+                    <input type="checkbox"  name="rememberMe" value="rememberMe" checked>
+                    <label id="rememberLabel" for="rememberMe">Remember me</label>
+                </div>
+                <div>
+                    <a href="#" draggable="false">Forgot password?</a>
+                </div>
+            </div>
+            <input class="sub-btn" type="submit" value="Login">
+            <div class="google-sign">
+                <p class="mt">or</p>
+                <a id="google" href="#" class="google mt" draggable="false"><i class="fa fa-google fa-fw"></i> Login with Google</a>
+                <p class="mtt">Don't have an account? <a href="/signup"class="signup" draggable="false">Sign Up</a></p>
+            </div>
+        </form>
+    </main> 
+    <%- include('partials/_footer') %>
+    <script src="https://kit.fontawesome.com/9046144151.js" crossorigin="anonymous"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
